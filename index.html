@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luma House is a modern luxury hair salon offering tailored cuts, colour and styling.">
+  <title>Luma House | Luxury Hair Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Luma House home">
+        <span class="brand-mark">LH</span>
+        <span class="brand-name">Luma House</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#style-matcher">Style Matcher</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a class="button button-small button-dark" href="#booking">Book now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/salon-hero.png" alt="Client with glossy brunette waves in a warm luxury salon">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="eyebrow">Modern hair, made personal</p>
+        <h1 id="hero-title">Luxury hair styling,<br><em>tailored to you.</em></h1>
+        <p class="hero-copy">Thoughtful cuts, dimensional colour and effortless styling in a calm, design-led salon.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#booking">Book appointment</a>
+          <a class="button button-light" href="#style-matcher">Try style matcher <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="hero-meta" aria-label="Salon highlights">
+          <div><strong>4.9</strong><span>Client rating</span></div>
+          <div><strong>8+</strong><span>Expert stylists</span></div>
+          <div><strong>Tue-Sat</strong><span>Open weekly</span></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
+        <span>Discover</span>
+        <i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <section class="section intro-strip" aria-label="Salon philosophy">
+      <div class="container intro-strip-inner">
+        <span>Cut</span><i></i><span>Colour</span><i></i><span>Care</span><i></i><span>Confidence</span>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-heading split-heading reveal">
+          <div>
+            <p class="eyebrow">The Luma experience</p>
+            <h2>Beautiful hair starts with being <em>understood.</em></h2>
+          </div>
+          <p>We pair technical expertise with genuine listening. Every visit begins with your lifestyle, texture and goals, so your finished look feels distinctly yours.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="feature-number">01</span>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M13 34c7-1 8-10 9-19m13 19c-7-1-8-10-9-19M19 15h10M16 38h16" /></svg>
+            </div>
+            <h3>Expert stylists</h3>
+            <p>Skilled artists with a sharp eye for shape, movement and modern technique.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-number">02</span>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M9 15h30v20H21l-7 6v-6H9zM16 22h16M16 28h10" /></svg>
+            </div>
+            <h3>Personal consultations</h3>
+            <p>Honest, unrushed guidance shaped around your features, routine and ambitions.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-number">03</span>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 6c2 8 7 13 15 15-8 2-13 7-15 15-2-8-7-13-15-15 8-2 13-7 15-15zM38 31c1 4 3 6 7 7-4 1-6 3-7 7-1-4-3-6-7-7 4-1 6-3 7-7z" /></svg>
+            </div>
+            <h3>Luxury treatments</h3>
+            <p>Restorative rituals and premium products chosen for visible, lasting results.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">Our menu</p>
+          <h2>Services for every <em>hair story.</em></h2>
+          <p>Pricing reflects consultation, finish and our signature attention to detail.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="service-top"><span>01</span><strong>from &pound;48</strong></div>
+            <h3>Cut &amp; blow dry</h3>
+            <p>A tailored shape, cleansing ritual and polished finish.</p>
+            <button class="text-link service-book" type="button" data-service="Cut and blow dry">Book now <span>&rarr;</span></button>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-top"><span>02</span><strong>from &pound;58</strong></div>
+            <h3>Wash, cut &amp; style</h3>
+            <p>Consultation-led cut finished with your chosen style.</p>
+            <button class="text-link service-book" type="button" data-service="Wash, cut and style">Book now <span>&rarr;</span></button>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-top"><span>03</span><strong>from &pound;75</strong></div>
+            <h3>Hair colouring</h3>
+            <p>Rich, dimensional colour formulated uniquely for you.</p>
+            <button class="text-link service-book" type="button" data-service="Hair colouring">Book now <span>&rarr;</span></button>
+          </article>
+          <article class="service-card reveal featured-service">
+            <span class="popular-tag">Most loved</span>
+            <div class="service-top"><span>04</span><strong>from &pound;120</strong></div>
+            <h3>Balayage</h3>
+            <p>Hand-painted brightness with a soft, seamless grow-out.</p>
+            <button class="text-link service-book" type="button" data-service="Balayage">Book now <span>&rarr;</span></button>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-top"><span>05</span><strong>from &pound;95</strong></div>
+            <h3>Highlights</h3>
+            <p>Fine, luminous ribbons placed to flatter your cut.</p>
+            <button class="text-link service-book" type="button" data-service="Highlights">Book now <span>&rarr;</span></button>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-top"><span>06</span><strong>consultation</strong></div>
+            <h3>Hair extensions</h3>
+            <p>Natural-looking length and volume, expertly colour matched.</p>
+            <button class="text-link service-book" type="button" data-service="Hair extensions">Book now <span>&rarr;</span></button>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-top"><span>07</span><strong>from &pound;90</strong></div>
+            <h3>Bridal hair</h3>
+            <p>Camera-ready, romantic styling designed to last all day.</p>
+            <button class="text-link service-book" type="button" data-service="Bridal hair">Book now <span>&rarr;</span></button>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-top"><span>08</span><strong>from &pound;35</strong></div>
+            <h3>Hair treatment</h3>
+            <p>Deep repair, shine and softness for stressed strands.</p>
+            <button class="text-link service-book" type="button" data-service="Hair treatment">Book now <span>&rarr;</span></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section matcher-section" id="style-matcher">
+      <div class="container">
+        <div class="matcher-shell reveal">
+          <div class="matcher-intro">
+            <p class="eyebrow light">Luma style intelligence</p>
+            <h2>Meet your next <em>signature look.</em></h2>
+            <p>Tell us a little about your hair and style. Our smart matcher will pair your features with a flattering salon recommendation.</p>
+            <div class="matcher-note">
+              <span aria-hidden="true">AI</span>
+              <p><strong>Personalised in seconds</strong><br>Built from stylist-approved face shape and texture principles.</p>
+            </div>
+          </div>
+
+          <form class="matcher-form" id="matcher-form">
+            <div class="matcher-progress"><span>Style profile</span><strong>5 questions</strong></div>
+            <div class="matcher-grid">
+              <div class="form-group">
+                <label for="face-shape">Face shape</label>
+                <select id="face-shape" required>
+                  <option value="">Choose your face shape</option>
+                  <option value="oval">Oval</option>
+                  <option value="round">Round</option>
+                  <option value="square">Square</option>
+                  <option value="heart">Heart</option>
+                  <option value="diamond">Diamond</option>
+                  <option value="long">Long</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="hair-length">Current hair length</label>
+                <select id="hair-length" required>
+                  <option value="">Choose your length</option>
+                  <option value="short">Short</option>
+                  <option value="medium">Medium</option>
+                  <option value="long">Long</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="hair-type">Hair type</label>
+                <select id="hair-type" required>
+                  <option value="">Choose your hair type</option>
+                  <option value="straight">Straight</option>
+                  <option value="wavy">Wavy</option>
+                  <option value="curly">Curly</option>
+                  <option value="coily">Coily</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="style-preference">Style preference</label>
+                <select id="style-preference" required>
+                  <option value="">Choose your aesthetic</option>
+                  <option value="low maintenance">Low maintenance</option>
+                  <option value="glam">Glam</option>
+                  <option value="professional">Professional</option>
+                  <option value="trendy">Trendy</option>
+                  <option value="bold">Bold</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label for="colour-preference">Colour preference</label>
+                <select id="colour-preference" required>
+                  <option value="">Choose a colour direction</option>
+                  <option value="natural">Natural</option>
+                  <option value="blonde">Blonde</option>
+                  <option value="brunette">Brunette</option>
+                  <option value="copper">Copper</option>
+                  <option value="pastel">Pastel</option>
+                  <option value="vivid">Vivid</option>
+                </select>
+              </div>
+            </div>
+            <button class="button button-cream button-wide" type="submit">Find my style <span aria-hidden="true">&rarr;</span></button>
+          </form>
+
+          <div class="matcher-result" id="matcher-result" aria-live="polite" hidden>
+            <div class="result-heading">
+              <div>
+                <p class="eyebrow light">Your Luma match</p>
+                <h3 id="result-name"></h3>
+              </div>
+              <span class="match-score">98% match</span>
+            </div>
+            <p class="result-reason" id="result-reason"></p>
+            <div class="result-details">
+              <div><span>Colour direction</span><strong id="result-colour"></strong></div>
+              <div><span>Maintenance</span><strong id="result-maintenance"></strong></div>
+              <div><span>Salon service</span><strong id="result-service"></strong></div>
+            </div>
+            <div class="result-actions">
+              <button class="button button-cream" id="book-style" type="button">Book this style</button>
+              <button class="text-link light-link" id="restart-matcher" type="button">Start again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-heading split-heading reveal">
+          <div>
+            <p class="eyebrow">Recent work</p>
+            <h2>Made at <em>Luma.</em></h2>
+          </div>
+          <p>Real inspiration for your next appointment, from subtle shape shifts to complete transformations.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card gallery-one reveal"><div><span>Colour</span><h3>Blonde balayage</h3></div></article>
+          <article class="gallery-card gallery-two reveal"><div><span>Gloss</span><h3>Glossy brunette</h3></div></article>
+          <article class="gallery-card gallery-three reveal"><div><span>Texture</span><h3>Curly cut</h3></div></article>
+          <article class="gallery-card gallery-four reveal"><div><span>Occasion</span><h3>Bridal updo</h3></div></article>
+          <article class="gallery-card gallery-five reveal"><div><span>Cut</span><h3>Short bob</h3></div></article>
+          <article class="gallery-card gallery-six reveal"><div><span>Length</span><h3>Hair extensions</h3></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">Kind words</p>
+          <h2>Loved by our <em>clients.</em></h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card reveal">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"The first salon where I felt truly listened to. My colour is soft, expensive-looking and so easy to maintain."</blockquote>
+            <div class="client"><span>AM</span><div><strong>Amelia M.</strong><small>Balayage client</small></div></div>
+          </article>
+          <article class="testimonial-card reveal">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"Every detail feels considered. I left with the best cut I have had in years and a routine I can actually follow."</blockquote>
+            <div class="client"><span>SK</span><div><strong>Sophia K.</strong><small>Cut &amp; style client</small></div></div>
+          </article>
+          <article class="testimonial-card reveal">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"My bridal hair was effortless, elegant and stayed perfect all day. The whole experience was wonderfully calm."</blockquote>
+            <div class="client"><span>OL</span><div><strong>Olivia L.</strong><small>Bridal client</small></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="booking">
+      <div class="container booking-layout">
+        <div class="booking-copy reveal">
+          <p class="eyebrow">Your appointment</p>
+          <h2>Let&apos;s create something <em>beautiful.</em></h2>
+          <p>Choose your service and preferred time. We&apos;ll save your request in this browser so you can return to it anytime.</p>
+          <div class="booking-promise">
+            <div><span aria-hidden="true">01</span><p><strong>Tailored consultation</strong><br>Every appointment starts with you.</p></div>
+            <div><span aria-hidden="true">02</span><p><strong>Transparent pricing</strong><br>We confirm all costs before we begin.</p></div>
+            <div><span aria-hidden="true">03</span><p><strong>Calm, considered care</strong><br>Never rushed. Always personal.</p></div>
+          </div>
+        </div>
+
+        <div class="booking-panel reveal">
+          <form id="booking-form" novalidate>
+            <div class="form-header">
+              <h3>Book an appointment</h3>
+              <span>All fields marked * are required</span>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="booking-name">Full name *</label>
+                <input type="text" id="booking-name" name="name" autocomplete="name" required>
+                <small class="error-message"></small>
+              </div>
+              <div class="form-group">
+                <label for="booking-email">Email address *</label>
+                <input type="email" id="booking-email" name="email" autocomplete="email" required>
+                <small class="error-message"></small>
+              </div>
+              <div class="form-group">
+                <label for="booking-phone">Phone number *</label>
+                <input type="tel" id="booking-phone" name="phone" autocomplete="tel" required>
+                <small class="error-message"></small>
+              </div>
+              <div class="form-group">
+                <label for="booking-service">Service *</label>
+                <select id="booking-service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option>Cut and blow dry</option>
+                  <option>Wash, cut and style</option>
+                  <option>Hair colouring</option>
+                  <option>Balayage</option>
+                  <option>Highlights</option>
+                  <option>Hair extensions</option>
+                  <option>Bridal hair</option>
+                  <option>Hair treatment</option>
+                </select>
+                <small class="error-message"></small>
+              </div>
+              <div class="form-group">
+                <label for="booking-stylist">Preferred stylist *</label>
+                <select id="booking-stylist" name="stylist" required>
+                  <option value="">Select a stylist</option>
+                  <option>No preference</option>
+                  <option>Elena - Creative Director</option>
+                  <option>Maya - Colour Specialist</option>
+                  <option>Isla - Cutting Specialist</option>
+                  <option>Amara - Texture Specialist</option>
+                </select>
+                <small class="error-message"></small>
+              </div>
+              <div class="form-group">
+                <label for="booking-date">Preferred date *</label>
+                <input type="date" id="booking-date" name="date" required>
+                <small class="error-message"></small>
+              </div>
+              <div class="form-group">
+                <label for="booking-time">Preferred time *</label>
+                <select id="booking-time" name="time" required>
+                  <option value="">Select a time</option>
+                  <option>9:00 AM</option>
+                  <option>10:30 AM</option>
+                  <option>12:00 PM</option>
+                  <option>1:30 PM</option>
+                  <option>3:00 PM</option>
+                  <option>4:30 PM</option>
+                  <option>6:00 PM</option>
+                </select>
+                <small class="error-message"></small>
+              </div>
+              <div class="form-group full-width">
+                <label for="booking-notes">Notes <span>(optional)</span></label>
+                <textarea id="booking-notes" name="notes" rows="4" placeholder="Tell us about your hair goals, colour history or anything we should know."></textarea>
+              </div>
+            </div>
+            <button class="button button-dark button-wide" type="submit">Request appointment <span aria-hidden="true">&rarr;</span></button>
+            <p class="form-status" id="booking-status" role="status"></p>
+          </form>
+
+          <div class="booking-summary" id="booking-summary" hidden>
+            <div class="summary-icon" aria-hidden="true">&#10003;</div>
+            <p class="eyebrow">Request saved</p>
+            <h3>Your appointment</h3>
+            <p class="summary-lead">We&apos;ve saved your booking request. A member of the Luma team would normally confirm this with you shortly.</p>
+            <dl id="booking-details"></dl>
+            <div class="summary-actions">
+              <button class="button button-dark" id="edit-booking" type="button">Edit booking</button>
+              <button class="text-link danger-link" id="cancel-booking" type="button">Cancel booking</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-layout">
+        <div class="contact-info reveal">
+          <p class="eyebrow light">Visit Luma House</p>
+          <h2>A little time, just <em>for you.</em></h2>
+          <p>Step into a warm, unhurried space in the heart of the city.</p>
+          <address>
+            <div><span>Find us</span><strong>24 Rose Lane<br>London, W1 2AB</strong></div>
+            <div><span>Call</span><a href="tel:+442012345678">+44 (0)20 1234 5678</a></div>
+            <div><span>Email</span><a href="mailto:hello@lumahouse.co.uk">hello@lumahouse.co.uk</a></div>
+          </address>
+          <div class="hours">
+            <span>Opening hours</span>
+            <div><p>Tuesday - Friday</p><strong>9:00 - 19:00</strong></div>
+            <div><p>Saturday</p><strong>9:00 - 17:00</strong></div>
+            <div><p>Sunday - Monday</p><strong>Closed</strong></div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <p class="eyebrow">Say hello</p>
+          <h3>How can we help?</h3>
+          <div class="form-group">
+            <label for="contact-name">Your name *</label>
+            <input type="text" id="contact-name" name="name" required>
+            <small class="error-message"></small>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email address *</label>
+            <input type="email" id="contact-email" name="email" required>
+            <small class="error-message"></small>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message *</label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+            <small class="error-message"></small>
+          </div>
+          <button class="button button-dark button-wide" type="submit">Send message <span aria-hidden="true">&rarr;</span></button>
+          <p class="form-status" id="contact-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div>
+        <a class="brand footer-brand" href="#home"><span class="brand-mark">LH</span><span class="brand-name">Luma House</span></a>
+        <p>Modern hair, made personal.</p>
+      </div>
+      <div class="footer-links">
+        <span>Explore</span>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Book</a>
+      </div>
+      <div class="footer-links">
+        <span>Follow</span>
+        <a href="#" aria-label="Luma House on Instagram">Instagram</a>
+        <a href="#" aria-label="Luma House on Pinterest">Pinterest</a>
+        <a href="#" aria-label="Luma House on TikTok">TikTok</a>
+      </div>
+      <div class="footer-newsletter">
+        <span>The Luma edit</span>
+        <p>Hair notes, care tips and salon news.</p>
+        <a class="text-link light-link" href="mailto:hello@lumahouse.co.uk?subject=Join%20the%20Luma%20Edit">Join the list <span>&rarr;</span></a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year"></span> Luma House. Portfolio concept.</p>
+      <div><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
