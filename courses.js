@@ -1,6 +1,6 @@
 "use strict";
 
-const CART_KEY = "lumaHouseCourseCart";
+const CART_KEY = "studioNixCourseCart";
 
 const header = document.querySelector("#site-header");
 const navToggle = document.querySelector(".nav-toggle");
