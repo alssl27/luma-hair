@@ -1,15 +1,9 @@
 "use strict";
 
-const STORAGE_KEY = "lumaHouseBooking";
-
 const header = document.querySelector("#site-header");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector("#nav-menu");
 const backToTop = document.querySelector("#back-to-top");
-const bookingForm = document.querySelector("#booking-form");
-const bookingSummary = document.querySelector("#booking-summary");
-const bookingDetails = document.querySelector("#booking-details");
-const bookingStatus = document.querySelector("#booking-status");
 const matcherForm = document.querySelector("#matcher-form");
 const matcherResult = document.querySelector("#matcher-result");
 
@@ -46,7 +40,7 @@ document.querySelector("#current-year").textContent = new Date().getFullYear();
 
 // Announcement bar: cycles through short salon messages.
 const announcementMessages = [
-  "<u>Book an appointment</u> with our team today",
+  "<u>New:</u> online video courses now available",
   "Complimentary consultation with every colour service",
   "Open Tuesday to Saturday &mdash; 24 Rose Lane, London"
 ];
@@ -122,107 +116,6 @@ document.querySelectorAll("input, select, textarea").forEach((field) => {
     if (message) message.textContent = "";
   });
 });
-
-// Booking system: stores one editable appointment in localStorage.
-function getBookingFromForm() {
-  return Object.fromEntries(new FormData(bookingForm).entries());
-}
-
-function fillBookingForm(booking) {
-  Object.entries(booking).forEach(([name, value]) => {
-    const field = bookingForm.elements[name];
-    if (field) field.value = value;
-  });
-}
-
-function formatDate(dateString) {
-  const date = new Date(`${dateString}T12:00:00`);
-  return new Intl.DateTimeFormat("en-GB", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric"
-  }).format(date);
-}
-
-function showBookingSummary(booking) {
-  const fields = [
-    ["Name", booking.name],
-    ["Service", booking.service],
-    ["Stylist", booking.stylist],
-    ["Date", formatDate(booking.date)],
-    ["Time", booking.time],
-    ["Contact", `${booking.email} / ${booking.phone}`]
-  ];
-
-  if (booking.notes) fields.push(["Notes", booking.notes]);
-
-  bookingDetails.innerHTML = fields
-    .map(([label, value]) => `<div><dt>${label}</dt><dd>${escapeHtml(value)}</dd></div>`)
-    .join("");
-
-  bookingForm.hidden = true;
-  bookingSummary.hidden = false;
-}
-
-function escapeHtml(value) {
-  const element = document.createElement("div");
-  element.textContent = value;
-  return element.innerHTML;
-}
-
-bookingForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  bookingStatus.textContent = "";
-
-  if (!validateForm(bookingForm)) {
-    bookingStatus.textContent = "Please complete the highlighted fields.";
-    bookingForm.querySelector("[aria-invalid='true']")?.focus();
-    return;
-  }
-
-  const booking = getBookingFromForm();
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(booking));
-  showBookingSummary(booking);
-});
-
-document.querySelector("#edit-booking").addEventListener("click", () => {
-  const savedBooking = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-  fillBookingForm(savedBooking);
-  bookingSummary.hidden = true;
-  bookingForm.hidden = false;
-  bookingForm.querySelector("input")?.focus();
-});
-
-document.querySelector("#cancel-booking").addEventListener("click", () => {
-  localStorage.removeItem(STORAGE_KEY);
-  bookingForm.reset();
-  bookingSummary.hidden = true;
-  bookingForm.hidden = false;
-  bookingStatus.textContent = "Your saved booking has been cancelled.";
-});
-
-document.querySelectorAll(".service-book").forEach((button) => {
-  button.addEventListener("click", () => {
-    document.querySelector("#booking-service").value = button.dataset.service;
-    document.querySelector("#booking").scrollIntoView({ behavior: "smooth" });
-    setTimeout(() => document.querySelector("#booking-name").focus(), 650);
-  });
-});
-
-// Do not allow appointments in the past.
-const dateInput = document.querySelector("#booking-date");
-dateInput.min = new Date().toISOString().split("T")[0];
-
-try {
-  const savedBooking = JSON.parse(localStorage.getItem(STORAGE_KEY));
-  if (savedBooking?.name && savedBooking?.service && savedBooking?.date) {
-    fillBookingForm(savedBooking);
-    showBookingSummary(savedBooking);
-  }
-} catch {
-  localStorage.removeItem(STORAGE_KEY);
-}
 
 // Stylist-authored rules power the AI-style recommendation experience.
 const faceShapeRules = {
@@ -348,7 +241,6 @@ matcherForm.addEventListener("submit", (event) => {
   document.querySelector("#result-colour").textContent = colourSuggestions[profile.colour];
   document.querySelector("#result-maintenance").textContent = preference.maintenance;
   document.querySelector("#result-service").textContent = service;
-  document.querySelector("#book-style").dataset.service = service;
 
   matcherForm.hidden = true;
   matcherResult.hidden = false;
@@ -359,12 +251,6 @@ document.querySelector("#restart-matcher").addEventListener("click", () => {
   matcherResult.hidden = true;
   matcherForm.hidden = false;
   document.querySelector("#face-shape").focus();
-});
-
-document.querySelector("#book-style").addEventListener("click", (event) => {
-  document.querySelector("#booking-service").value = event.currentTarget.dataset.service;
-  document.querySelector("#booking").scrollIntoView({ behavior: "smooth" });
-  setTimeout(() => document.querySelector("#booking-name").focus(), 650);
 });
 
 // Contact form demo: validates locally and provides clear feedback.
