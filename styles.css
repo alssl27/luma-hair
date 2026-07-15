@@ -764,100 +764,6 @@ textarea:focus-visible {
   color: var(--white);
 }
 
-/* Gallery */
-.gallery {
-  background: var(--paper);
-}
-
-.gallery-grid {
-  display: grid;
-  grid-auto-rows: 260px;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 14px;
-}
-
-.gallery-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius);
-  background-image: linear-gradient(0deg, rgba(40, 40, 40, 0.72), rgba(40, 40, 40, 0.02) 65%), url("assets/salon-hero.png");
-  background-repeat: no-repeat;
-  background-size: auto, 220%;
-  filter: saturate(0.35);
-  transition: filter 450ms ease, background-size 650ms ease;
-}
-
-.gallery-card::after {
-  position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: var(--radius);
-  content: "";
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.gallery-card:hover {
-  background-size: auto, 235%;
-  filter: saturate(0.75);
-}
-
-.gallery-card:hover::after {
-  opacity: 1;
-}
-
-.gallery-card div {
-  position: absolute;
-  z-index: 2;
-  right: 26px;
-  bottom: 24px;
-  left: 26px;
-  color: var(--white);
-}
-
-.gallery-card span {
-  font-family: var(--font-display);
-  font-size: 0.56rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-}
-
-.gallery-card h3 {
-  margin-top: 6px;
-  color: var(--white);
-}
-
-.gallery-one {
-  grid-column: span 5;
-  grid-row: span 2;
-  background-position: center, 73% center;
-}
-
-.gallery-two {
-  grid-column: span 4;
-  background-position: center, 79% 24%;
-}
-
-.gallery-three {
-  grid-column: span 3;
-  background-position: center, 69% 44%;
-}
-
-.gallery-four {
-  grid-column: span 3;
-  background-position: center, 88% 68%;
-}
-
-.gallery-five {
-  grid-column: span 4;
-  background-position: center, 74% 35%;
-}
-
-.gallery-six {
-  grid-column: span 7;
-  background-position: center, 84% 53%;
-}
-
 /* Testimonials */
 .testimonials {
   background: var(--soft);
@@ -1289,21 +1195,6 @@ textarea:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .gallery-grid {
-    grid-auto-rows: 280px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery-card {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-
-  .gallery-one,
-  .gallery-six {
-    grid-column: span 2;
-  }
-
   .contact-info {
     padding-bottom: 20px;
   }
@@ -1372,17 +1263,6 @@ textarea:focus-visible {
 
   .full-width {
     grid-column: auto;
-  }
-
-  .gallery-grid {
-    grid-auto-rows: 320px;
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-card,
-  .gallery-one,
-  .gallery-six {
-    grid-column: 1;
   }
 
   .testimonial-card blockquote {
@@ -1559,18 +1439,24 @@ textarea:focus-visible {
 .course-thumb {
   position: relative;
   height: 210px;
-  background-image: linear-gradient(0deg, rgba(40, 40, 40, 0.35), rgba(40, 40, 40, 0.02) 60%), url("assets/salon-hero.png");
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: auto, 240%;
-  filter: saturate(0.35);
+  background-size: cover;
 }
 
-.thumb-one { background-position: center, 72% 20%; }
-.thumb-two { background-position: center, 80% 35%; }
-.thumb-three { background-position: center, 65% 50%; }
-.thumb-four { background-position: center, 88% 60%; }
-.thumb-five { background-position: center, 75% 30%; }
-.thumb-six { background-position: center, 84% 45%; }
+.course-thumb::before {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(40, 40, 40, 0.35), rgba(40, 40, 40, 0.02) 60%);
+  content: "";
+}
+
+.thumb-one { background-image: url("assets/hair-blonde-waves.jpg"); }
+.thumb-two { background-image: url("assets/hair-silver-lob.jpg"); }
+.thumb-three { background-image: url("assets/hair-blonde-profile.jpg"); }
+.thumb-four { background-image: url("assets/hair-silver-straight.jpg"); }
+.thumb-five { background-image: url("assets/hair-platinum-long.jpg"); }
+.thumb-six { background-image: url("assets/hair-blonde-waves.jpg"); background-position: center 80%; }
 
 .course-body {
   display: flex;
