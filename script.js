@@ -44,6 +44,23 @@ backToTop.addEventListener("click", () => {
 
 document.querySelector("#current-year").textContent = new Date().getFullYear();
 
+// Announcement bar: cycles through short salon messages.
+const announcementMessages = [
+  "<u>Book an appointment</u> with our team today",
+  "Complimentary consultation with every colour service",
+  "Open Tuesday to Saturday &mdash; 24 Rose Lane, London"
+];
+const announceMessage = document.querySelector("#announce-message");
+let announcementIndex = 0;
+
+function showAnnouncement(step) {
+  announcementIndex = (announcementIndex + step + announcementMessages.length) % announcementMessages.length;
+  announceMessage.innerHTML = announcementMessages[announcementIndex];
+}
+
+document.querySelector("#announce-prev").addEventListener("click", () => showAnnouncement(-1));
+document.querySelector("#announce-next").addEventListener("click", () => showAnnouncement(1));
+
 // Reveal sections only when they enter the viewport.
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
