@@ -1452,11 +1452,11 @@ textarea:focus-visible {
 }
 
 .thumb-one { background-image: url("assets/hair-blonde-waves.jpg"); }
-.thumb-two { background-image: url("assets/hair-silver-lob.jpg"); }
+.thumb-two { background-image: url("assets/hair-brunette-waves.jpg"); }
 .thumb-three { background-image: url("assets/hair-blonde-profile.jpg"); }
 .thumb-four { background-image: url("assets/hair-silver-straight.jpg"); }
 .thumb-five { background-image: url("assets/hair-extensions-fitting.jpg"); }
-.thumb-six { background-image: url("assets/hair-blonde-waves.jpg"); }
+.thumb-six { background-image: url("assets/hair-silver-lob.jpg"); }
 
 .course-body {
   display: flex;
