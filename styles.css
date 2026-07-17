@@ -443,9 +443,7 @@ textarea:focus-visible {
 
 .hero-image {
   width: 100%;
-  aspect-ratio: 1 / 1.02;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
 }
 
 .hero-content {
@@ -1445,8 +1443,11 @@ textarea:focus-visible {
 
 .course-thumb::before {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, rgba(40, 40, 40, 0.35), rgba(40, 40, 40, 0.02) 60%);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 38%;
+  background: linear-gradient(0deg, rgba(40, 40, 40, 0.32), rgba(40, 40, 40, 0));
   content: "";
 }
 
