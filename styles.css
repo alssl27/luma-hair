@@ -174,15 +174,13 @@ textarea:focus-visible {
   outline-offset: 3px;
 }
 
-.button-outline,
-.button-dark {
+.button-outline {
   border-color: #bdbdbd;
   color: var(--ink);
   background: transparent;
 }
 
-.button-outline:hover,
-.button-dark:hover {
+.button-outline:hover {
   border-color: var(--ink);
 }
 
