@@ -1438,10 +1438,11 @@ textarea:focus-visible {
 
 .course-thumb {
   position: relative;
-  height: 210px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--soft);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .course-thumb::before {
@@ -1455,8 +1456,8 @@ textarea:focus-visible {
 .thumb-two { background-image: url("assets/hair-silver-lob.jpg"); }
 .thumb-three { background-image: url("assets/hair-blonde-profile.jpg"); }
 .thumb-four { background-image: url("assets/hair-silver-straight.jpg"); }
-.thumb-five { background-image: url("assets/hair-platinum-long.jpg"); }
-.thumb-six { background-image: url("assets/hair-blonde-waves.jpg"); background-position: center 80%; }
+.thumb-five { background-image: url("assets/hair-extensions-fitting.jpg"); }
+.thumb-six { background-image: url("assets/hair-blonde-waves.jpg"); }
 
 .course-body {
   display: flex;
@@ -1501,7 +1502,8 @@ textarea:focus-visible {
   letter-spacing: 0.06em;
 }
 
-.course-add {
+.course-add,
+.course-view {
   min-height: 42px;
   padding: 9px 18px;
   font-size: 0.6rem;
